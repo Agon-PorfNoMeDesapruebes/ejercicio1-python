@@ -1,6 +1,6 @@
 import os
 os.system("clear")
-
+"""
 numero =input("¿Quieres iterar un numero? (SI/NO) ")
 
 if numero == "SI" or numero == "si" or numero == "Si" or numero == "sí":
@@ -23,4 +23,4 @@ if numero == "SI" or numero == "si" or numero == "Si" or numero == "sí":
             cambiar = input(f"¿Quieres cambiar el numero? (SI/NO) ")
             if cambiar == "SI" or cambiar == "si" or cambiar == "Si" or cambiar == "sí":
                 numeroUsado = float(input("Introduce un numero: "))
-
+"""
