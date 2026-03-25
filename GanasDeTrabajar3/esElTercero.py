@@ -76,4 +76,62 @@ print(potencia(3))
 
 """6. map() con lambda"""
 
-""""""
+"""
+primero = [10, 7, 3]
+segundo = [1, 9, 4]
+
+promedioMayor = list(map(lambda primero, segundo: primero - segundo, primero, segundo))
+print("La resta de cada columna da:", promedioMayor)
+
+suma = sum(promedioMayor)
+resultado = suma / 3
+print(f"Suma de los elementos de promedioMayor: {suma}")
+print(f"El resultado final: {resultado}") 
+"""
+
+"""7. Integrador: Crear programa que permita
+al usuario agregar tareas con descripción, 
+fecha límite y prioridad, así como mostrar 
+la lista de tareas. 
+Este menú se repite hasta que el usuario elige salir."""
+
+"""
+tareas = []
+
+while True:
+    print("\n¿Qué quieres hacer?")
+    print("(1) Ver tareas")
+    print("(2) Agregar tareas")
+    print("(3) Salir")
+    
+    opcion = input("Elige una opción: ")
+
+    if opcion == "3":
+        print("¡Hasta luego!")
+        break
+
+    elif opcion == "1":
+        print("\nLista completa de tareas:")
+        for i in tareas:
+            print(i)
+
+    elif opcion == "2":
+        while True:
+            pregunta = input("\n¿Quieres agregar una tarea? (1 = si, 2 = no): ")
+            if pregunta == "2":
+                break
+            elif pregunta != "1":
+                print("No se entendió el mensaje")
+            else:
+                creacion1 = input("Agrega el nombre de la tarea: ")
+                creacion2 = input("Describe la tarea: ")
+                creacion3 = input("Fecha limite: ")
+                creacion4 = input("Prioridad: ")
+                nuevaTarea = {"nombre": creacion1, "descripcion": creacion2, "fecha": creacion3, "importancia": creacion4}
+                tareas.append(nuevaTarea)
+                print("Tarea agregada:", nuevaTarea)
+
+    else:
+        print("No se entendió el mensaje")
+
+"""
