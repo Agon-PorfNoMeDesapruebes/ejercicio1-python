@@ -64,6 +64,22 @@ else:
     print("No es un palindromo")
 """
 
+"""
+palindromo = input("Ingrese su palabra: ")
+palindromo2 = ""
+
+for letra in palindromo:
+    palindromo2 = letra + palindromo2
+
+print(palindromo2)
+
+if palindromo == palindromo2:
+    print("Es un palindromo")
+else:
+    print("No es un palindromo")
+"""
+
+
 """5. Lambda para sumar, potencia"""
 
 """
@@ -135,3 +151,4 @@ while True:
         print("No se entendió el mensaje")
 
 """
+
