@@ -24,6 +24,19 @@ def marcar_completada(tareas):
     else:
         print("Debes ingresar un número.")
 
+def pedir_fecha():
+    while True:
+        fecha = input("Ingrese la fecha limite (formato: dd/mm/yyyy): ")
+        partes = fecha.split("/")
+        
+        if len(partes) == 3 and all(p.isdigit() for p in partes):
+            dia, mes, anio = int(partes[0]), int(partes[1]), int(partes[2])
+            
+            if 1 <= dia <= 31 and 1 <= mes <= 12 and anio >= 2025:
+                return fecha
+        
+        print("Formato inválido. Use dd/mm/yyyy (ej: 25/12/2025)")
+
 def mostrar_tareas(tareas):
     if not tareas:
         print("No hay tareas pendientes.")
@@ -35,13 +48,13 @@ def mostrar_tareas(tareas):
                     print(f"\nTarea {i}:")
                     for clave, valor in tarea.items():
                         print(f"{clave}: {valor}")
-        if cuestion == "2":
+        elif cuestion == "2":
             for i, tarea in enumerate(tareas, 1):
                 if tarea["Estado"] == False:
                     print(f"\nTarea {i}:")
                     for clave, valor in tarea.items():
                         print(f"{clave}: {valor}")
-        if cuestion == "3":
+        elif cuestion == "3":
             for i, tarea in enumerate(tareas, 1):
                 print(f"\nTarea {i}:")
                 for clave, valor in tarea.items():
@@ -62,7 +75,7 @@ if __name__ == "__main__":
 
         if opcion == "1":
             tarea_nueva = input("Ingrese la descripción de la tarea: ")
-            fecha_limite_nueva = input("Ingrese la fecha limite (formato: dd/mm/yyyy): ")
+            fecha_limite_nueva = pedir_fecha()
             prioridad_nueva = input("Ingrese la prioridad: ")
             agregar_tarea(lista_tareas, tarea_nueva, fecha_limite_nueva, prioridad_nueva)
 
