@@ -111,7 +111,7 @@ fecha límite y prioridad, así como mostrar
 la lista de tareas. 
 Este menú se repite hasta que el usuario elige salir."""
 
-"""
+
 tareas = []
 
 while True:
@@ -149,5 +149,3 @@ while True:
 
     else:
         print("No se entendió el mensaje")
-
-"""

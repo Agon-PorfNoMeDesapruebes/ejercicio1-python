@@ -119,9 +119,9 @@ nombres hasta que el usuario ingrese "fin". Luego,
 el programa mostrará la lista de nombres en orden alfabético,
 indicará cuántos nombres empiezan con la letra 'A' o 'E', 
 y mostrará si un nombre específico está en la lista."""
-"""
+
 dondeSeGuarda = []
-lista = input("Eres libre de agregar todos loss nombres que quieras, en caso de querer dejar de hacerlo escribe (fin)" )
+lista = input("Eres libre de agregar todos los nombres que quieras, en caso de querer dejar de hacerlo escribe (fin)" )
 while lista != "fin" :
     dondeSeGuarda.append(lista)
     lista = input("Eres libre de agregar todos loss nombres que quieras, en caso de querer dejar de hacerlo escribe (fin)" )
@@ -141,4 +141,3 @@ if "fin" in lista :
             print(f"{consulta} esta en la lista")
         else:
             print(f"{consulta} no esta en la lista")
-"""
